@@ -13,3 +13,4 @@ cleanup() {
 
 [ -z "${DEBUG+x}" ] || { echo "\"DEBUG\" environment variable is present. Enabling debugging output."; set -x; }
 
+trap cleanup EXIT
