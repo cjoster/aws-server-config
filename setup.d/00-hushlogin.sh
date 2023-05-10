@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-touch /etc/skel/.hushlogin
+[ ! -e /etc/skel/.hushlogin ] || touch /etc/skel/.hushlogin
