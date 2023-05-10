@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 
-set -euo pipefail
-
 id lordvadr && exit 0
 
 useradd -m -u 1000 -U -G wheel lordvadr
