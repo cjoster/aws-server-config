@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+id lordvadr && exit 0
+
 useradd -m -U -G wheel lordvadr
 
 mkdir ~lordvar/.ssh
