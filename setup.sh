@@ -15,7 +15,7 @@ cleanup() {
 
 trap cleanup EXIT
 
-userdel -r ec2-user
+#userdel -r ec2-user
 touch /etc/skel/.hushlogin
 
 useradd -m -u 1000 -g 1000 -G wheel lordvadr
@@ -25,7 +25,7 @@ chown -R lordvadr.lordvadr ~lordvadr
 chmod 700 ~lordvadr/.ssh
 chmod 600 ~lordvadr/.ssh/authorized_keys
 
-echo "%wheel ALL=(ALL) NOPASSWD: ALL" > /etc/sudoers.d/wheel
+#echo "%wheel ALL=(ALL) NOPASSWD: ALL" > /etc/sudoers.d/wheel
 
 dnf -y update
 
