@@ -19,6 +19,7 @@ for f in setup.d/*.sh; do
 	echo "========== examining ${f} =========="
 	bash -n "${f}" || { echo "${f} fails linting, skipping."; continue; }
   ret=0
+  [ -x "${f}" ] || { echo "${f} is not executable. Skipping."; continue; }
   "${f}" || ret="${?}"
 	echo "=============== ${f} Exited with return code ${ret} ======="
 done
