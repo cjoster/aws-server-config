@@ -4,7 +4,7 @@ set -euo pipefail
 
 id lordvadr && exit 0
 
-useradd -m -U -G wheel lordvadr
+useradd -m -u 1000 -U -G wheel lordvadr
 
 mkdir ~lordvadr/.ssh
 
