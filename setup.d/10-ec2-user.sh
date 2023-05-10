@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-#userdel -r ec2-user
+#id ec2-user > /dev/null 2>&1 && userdel -r ec2-user
